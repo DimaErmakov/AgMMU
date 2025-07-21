@@ -41,12 +41,12 @@ Through a three‑stage pipeline: automated knowledge extraction, QA generation,
 
 DIMITRY'S NOTES: The main changes to the code that can be found are in score.py, utils.py and eval.py. There are a couple of things you need to do to run the code, you need to download the necessary json files and images, while also changing the pathings in each file, I would just command shift f to find all instance of "dermakov". Use the Hugging Face website to download these. There are 3 versions of utils.py and eval.py, the use the rag and no rag versions by copy and pasting them into utils.py and eval.py. To utilize rag, you have to use UniIR (https://github.com/DimaErmakov/UniIR/) to get the Necessary embeddings to find the top retrieval candidates. You can then use Visualize retrieval to format the retrieved candidates. Fine tuning is also possible by using the no rag version of utils. One final thing to note is what each json file is:
 
-6k_evalset_wbg.json = set to use for benchmarking
-data/6k_evalset_wbg_add_on.jsonl = cleaned version for embedding queries  
-agmmu_ft_hf1.json = full fine tuning set (Ag base)
-cand_rag3.jsonl = candidate pool
-mbeir_sample_single_pool_test_k10_run.txt = the end result of embedding to then use visualize_retrivial on
-mbeir_sample_test.jsonl = the queries (should be a modified version of 6k_evalset_wbg.json by using clean_and_convert_json.py to clean 6k_evalset_wbg.json and then use add_fields_to_json.py) to embed for RAG
+**6k_evalset_wbg.json** = set to use for benchmarking
+**data/6k_evalset_wbg_add_on.jsonl** = cleaned version for embedding queries  
+**agmmu_ft_hf1.json** = full fine tuning set (Ag base)
+**cand_rag3.jsonl** = candidate pool**
+mbeir_sample_single_pool_test_k10_run.txt** = the end result of embedding to then use visualize_retrivial on
+**mbeir_sample_test.jsonl** = the queries (should be a modified version of 6k_evalset_wbg.json by using clean_and_convert_json.py to clean 6k_evalset_wbg.json and then use add_fields_to_json.py) to embed for RAG
 
 
 <img src="assets/agmmu_overview_v2.png" alt="AgMMU Overview" style="width: 100%;">

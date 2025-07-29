@@ -12,7 +12,7 @@ parent_dir = os.path.dirname(os.path.dirname(current_dir))
 if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
 
-from AgMMU.scoring_eval_pipeline.utils_no_rag import ModelHandler
+from AgMMU.scoring_eval_pipeline.utils import ModelHandler
 
 # Initialize model once globally
 model_handler = None
